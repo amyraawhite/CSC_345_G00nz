@@ -1,1 +1,3 @@
-// optional 
+public class HuffmanGUI {
+	
+}
