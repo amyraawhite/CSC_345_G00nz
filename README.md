@@ -39,3 +39,22 @@ get(K key):
 remove(K key):   
   - Method finds desired key and removes the key from the Hash Table; utilizes linear probing to find keys should they not be at the "correct" index
 
+
+**Frequencies Class:**<br> 
+The Frequencies<T> class calculates the frequencies of the items stored in the Hashtable class. 
+
+**Methods Implemented:**<br> 
+
+Constructor: 
+
+- Frequencies(): Constructs a new instance of the Frequencies class.
+
+Methods:
+
+calculateFrequencies(T[] items): This method calculates the frequencies of each item from the HashTable Class.
+
+displayFrequencies(): This method displays the calculated frequencies to the console. This would be a useful method for debugging and testing the working of our algorithm.
+
+
+
+
