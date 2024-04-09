@@ -51,9 +51,9 @@ Constructor:
 
 Methods:
 
-calculateFrequencies(T[] items): This method calculates the frequencies of each item from the HashTable Class.
+- calculateFrequencies(T[] items): This method calculates the frequencies of each item from the HashTable Class.
 
-displayFrequencies(): This method displays the calculated frequencies to the console. This would be a useful method for debugging and testing the working of our algorithm.
+- displayFrequencies(): This method displays the calculated frequencies to the console. This would be a useful method for debugging and testing the working of our algorithm.
 
 
 
