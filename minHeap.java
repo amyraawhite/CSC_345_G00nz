@@ -1,4 +1,11 @@
-// Author (s): Chitrangada
+/* Author: Chitrangada Juneja
+ * here, we assume the frequencies class has 
+ * each char in the index representing its index; 
+ * either way, we find a way to get the char, frequency
+ * Taking it for granted our nodes have a char-int as a 
+ * key
+ */
+
 public class minHeap {
 
 	public TreeNode [] heap;
@@ -88,7 +95,7 @@ public class minHeap {
 		return null;
 	}
 	
-	public 	TreeNode heapify( ) {
+	public 	void  heapify( ) {
 		/*
 		 * this method is to reheapify the heap after we
 		 * remove a node from it, and basically reset
@@ -148,5 +155,6 @@ public class minHeap {
 	
 	
 	
-	
+		 
+	 
 }
