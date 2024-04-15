@@ -34,12 +34,39 @@ put(K key):
   - Method places the key into the Hash Table; utilizes Linear Probing for collision management
     
 get(K key): 
-  - Method gets the desired key from hashTable; utilizes linear probing until key is found; if key is not found, returns empty KeyValuePair object / null
+  - Method gets the desired key from hashTable; utilizes linear probing until the key is found; if the key is not found, returns empty KeyValuePair object / null
     
 remove(K key):   
-  - Method finds desired key and removes the key from the Hash Table; utilizes linear probing to find keys should they not be at the "correct" index
+  - Method finds the desired key and removes the key from the Hash Table; utilizes linear probing to find keys should they not be at the "correct" index
+
+resizeUp(): 
+ - method resizes the Hash Table to be the next prime number and rehashes all of the values present in the hashMap
+
+putExisitng(KeyValuePair<K, V> key: 
+  - Method takes an existing Key/Value pair and inserts it into the new Hash Table to preserve its current frequency
+
+resizeDown(): 
+  - method resizes Hash Table to be the next smallest prime number and rehashes all of the values present in the Hash Table
 
 
+isPrime(int num): 
+  - method returns a boolean that says if the passed number was prime or not
+
+nextSmallestPrime(int num): 
+  - Method finds the next smallest prime number and uses isPrime to validate the number
+
+nextLargestPrime(int num): 
+  - Method find the next largest prime number and uses isPrime to validate that number
+
+hash(K key): 
+  - function returns the hash Value of the current key
+
+
+get_size(): 
+  - Method returns the current size of the table
+
+getHashTable(): 
+  - Method returns the current Hash Table
 **Frequencies Class:**<br> 
 The Frequencies<T> class calculates the frequencies of the items stored in the Hashtable class. 
 
