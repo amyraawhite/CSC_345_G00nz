@@ -32,17 +32,18 @@ public class Frequencies {
     	return uniques; 
     }
     
-//    public static void test() { 
-//    	Scanner keyboard = new Scanner(System.in); 
-//    	String user_input = keyboard.nextLine(); 
-//    	Frequencies freq = new Frequencies(user_input);
-//    	System.out.println(user_input); 
-//    	freq.calculateFrequencies(user_input); 
-//    	freq.returnUniques(); 
-//    }
-//    
-//    public static void main(String[] args) {
-//    	test(); 
-//    }
+    public static void test() { 
+    	Scanner keyboard = new Scanner(System.in); 
+    	String user_input = keyboard.nextLine(); 
+    	Frequencies freq = new Frequencies(user_input);
+    	System.out.println(user_input); 
+    	freq.calculateFrequencies(user_input); 
+    	freq.returnUniques(); 
+    }
+    
+    public static void main(String[] args) {
+    	test(); 
+    }
 }
+
 
