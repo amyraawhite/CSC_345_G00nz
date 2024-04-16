@@ -119,7 +119,40 @@ The minHeap class creates a minimum Heap , utilising an Array made up of TreeNod
 **Methods Implemented:**<br>
 
 minHeap(int i):
-  - Constructor to create and initialize a minHeap of size i, 
+  - Constructor to create and initialize a minHeap of size i.
+
+parentIndex( int i):
+  - calculates and returns the parent index of the curr heap index i.
+
+leftIndex( int i):
+  - calculates and returns the left child's index of the curr heap index i.
+
+rightIndex (int i):
+  - calculates and returns the right child's index of the curr heap index i.
+
+getSize():
+  - returns the current size of the min heap, where current size= number of TreeNodes set.
+
+insert(TreeNode curr):
+  - we insert the TreeNode curr into the heap's next open slot, and then call the heapify method to make it into a min heap again.
+
+swap (int i , int swap):
+  - swaps the TreeNode objects at index i and swap in the minHeap.
+
+getMin():
+  - if the heap isnt empty, we return heap[0], which is the minimum value in our heap, but we don't remove it from our heap.
+
+heapify():
+  - we reheap the min heap by calling sink function all parent Nodes of the current minHeap.
+
+sink(int index):
+  - we recursively swap the smallest child with the current parent index, and call sink after swapping it again, until all children are greater
+    than their parents.
+
+removeMin():
+  - we remove the minimum value in the heap at heap[0] , and then reheapify it after updating our size.
+
+
 
 
 
