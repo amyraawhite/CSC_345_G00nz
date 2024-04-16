@@ -1,8 +1,8 @@
 public class KeyValuePair <K, V> {
 	public K key; 
-	public V value;
+	public int value;
 	
-	public KeyValuePair(K k, V v) {
+	public KeyValuePair(K k, int v) {
 		this.key = k; 
 		this.value = v; 
 	}
@@ -11,7 +11,11 @@ public class KeyValuePair <K, V> {
 		return this.key; 
 	}
 	
-	public V getValue() {
+	public int getValue() {
 		return this.value; 
+	}
+	
+	public String toString() {
+		return key + ": " + value; 
 	}
 }
