@@ -66,7 +66,63 @@ get_size():
   - Method returns the current size of the table
 
 getHashTable(): 
-  - Method returns the current Hash Table
+  - Method returns the current Hash Table<br>
+
+**TreeNode Class:**<br>
+The TreeNode class utilizes the fact that as Huffman Encoding proceeds, we end up with a Tree; therefore instead of creating two different classes for this, we give a Node the ability to be identified as a subtree; therefore essentially, we dont deal with nodes, we deal with subtrees where its possible to have just a single node. This reduces our code, and makesit easier to implement the printing and merging of the nodes during debugging, especially since most of this will be accomplished recursively. 
+
+**Methods Implemented:**<br>
+
+TreeNode( int freq , char currChar):
+  - Constructor to create a TreeNode using the currChar as our key, and accessing the frequency as our value.
+
+getParent():
+  - Method to get the parent subtree of this TreeNode. For single nodes, this is null.
+
+getLeft():
+  - Method to get the left child of this TreeNode. For single nodes, this is null.
+
+getRight():
+  - Method to get the right child of this TreeNode. For single nodes, this is null.
+
+getKey():
+  - Method to get the key, which is the character associated with curr TreeNode.
+
+getFrequency():
+  - Method to get the value, which is the frequency associated with curr TreeNode.
+
+getLeaf():
+  - Method to get the status of the TreeNode: whether it is a leaf or not.
+
+setParent(TreeNode currParent):
+  - Method to set the parent of curr TreeNode.
+
+setLeft(TreeNode currLeft):
+  - Method to set the left child of curr TreeNode.
+
+setRight(TreeNode currRight):
+  - Method to set the right child of curr TreeNode.
+
+setKey(char currKey):
+  - Method to set the char/key of curr TreeNode.
+
+setFrequency(int currFreq):
+  - Method to set the frequency/value of curr TreeNode.
+
+setLeaf( boolean val):
+ - Method to set the isLeaf attribute of a TreeNode to val.
+
+
+**minHeap Class**<br>
+The minHeap class creates a minimum Heap , utilising an Array made up of TreeNodes. 
+
+**Methods Implemented:**<br>
+
+minHeap(int i):
+  - Constructor to create and initialize a minHeap of size i, 
+
+
+
 **Frequencies Class:**<br> 
 The Frequencies<T> class calculates the frequencies of the items stored in the Hashtable class. 
 
