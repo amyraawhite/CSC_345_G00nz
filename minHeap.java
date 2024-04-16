@@ -25,15 +25,15 @@ public class minHeap {
 	// to get the indices of the parent, 
 	// and left and right child
 	public int parentIndex ( int i) {
-		return (i-1)/2;
+		return (i)/2;
 	}
 		 
 	public int leftIndex( int i) {
-		return 2*i+1;
+		return 2*i;
 	}
 	
 	public int rightIndex (int i) {
-		return (2*i +2);
+		return (2*i +1);
 	}
 	//if we need current size
 	public int getSize() {
