@@ -28,7 +28,6 @@ public class HashTable<K, V> {
 			occupied++;
 		} else if (hashMap[hash].key == key) {
 			hashMap[hash].value += 1;
-			occupied++;
 		} else {
 			int i = hash;
 			while (true) {
@@ -102,13 +101,14 @@ public class HashTable<K, V> {
 		int newSize = nextLargestPrime(size + 1);
 		HashTable<K, V> replacement = new HashTable<K, V>(newSize);
 
-		for (int i = size; i <= 0; i--) {
+		for (int i = size - 1; i >= 0; i--) {
 			if (hashMap[i] != null) {
 				replacement.putExisting(hashMap[i]);
 			}
 		}
-
-		hashMap = replacement.hashMap;
+		
+		this.size = newSize; 
+		hashMap = replacement.hashMap; 
 	}
 
 	public void putExisting(KeyValuePair<K, V> key) {
@@ -116,13 +116,11 @@ public class HashTable<K, V> {
 
 		if (hashMap[hash] == null) {
 			hashMap[hash] = key;
-			occupied++;
 		} else {
 			int i = hash;
 			while (true) {
 				if (hashMap[i] == null) {
 					hashMap[i] = key;
-					occupied++;
 					break;
 				}
 				i++;
@@ -186,9 +184,14 @@ public class HashTable<K, V> {
 	public int get_size() {
 		return this.size;
 	}
+	
+	public int getOccupied() {
+		return this.occupied; 
+	}
 
 	public KeyValuePair<K, V>[] getHashTable() {
 		return this.hashMap;
 	}
 
 }
+
