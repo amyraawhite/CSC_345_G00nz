@@ -158,7 +158,7 @@ getHashTable():
 
 ## Huffman Class
 
-The Huffman class is specifically designed for encoding and decoding text using Huffman coding, a widely used method of lossless data compression.
+The Huffman class is specifically designed for encoding and decoding text using Huffman coding.
 
 ### Overview
 
