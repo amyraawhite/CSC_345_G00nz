@@ -3,9 +3,9 @@ Huffman Encoding
 
 Group Members: Amyra White, Suhani Surana, Chitrangada Juneja, Garegin Mazmanyan 
 
-INSERT EXPLANATIONS OF FINAL CODE PRODUCT AND FUNCTIONALITY 
 
-**Frequencies Class:**<br> 
+
+## Frequencies Class:
 The Frequencies<T> class calculates the frequencies of the items by using the HashTable class. After frequencies have been calculated it returns an array of all the unique values and characters 
 
 **Methods Implemented:**<br> 
@@ -21,7 +21,7 @@ Methods:
 - returnUniques(): method returns an array only containing unique characters; rides of null placeholders from HashTable 
 
 
-**TreeNode Class:**<br>
+## TreeNode Class:
 The TreeNode class utilizes the fact that as Huffman Encoding proceeds, we end up with a Tree; therefore instead of creating two different classes for this, we give a Node the ability to be identified as a subtree; therefore essentially, we dont deal with nodes, we deal with subtrees where its possible to have just a single node. This reduces our code, and makes it easier to implement the printing and merging of the nodes during debugging, especially since most of this will be accomplished recursively. 
 
 **Methods Implemented:**<br>
@@ -66,7 +66,7 @@ setLeaf( boolean val):
  - Method to set the isLeaf attribute of a TreeNode to val.
 
 
-**minHeap Class**<br>
+## minHeap Class
 The minHeap class creates a minimum Heap , utilising an Array made up of TreeNodes. 
 
 **Methods Implemented:**<br>
@@ -105,7 +105,8 @@ sink(int index):
 removeMin():
   - we remove the minimum value in the heap at heap[0] , and then reheapify it after updating our size.
 
-**HashTable Class:**<br> 
+## HashTable Class
+
 Class builds/constructs a HashTable that will hold the frequencies of characters found
 within a user's input value. Hash Table will utilize resizing and load factor management. 
 
@@ -193,15 +194,15 @@ PrefixMap():
     
 PrefixMap(int size):  
   - Constructor for initialization of HashTable with a size input
-    
+
 put(char key, String prefixCode): 
-  - 
+  -Method to put the desired key into the PrefixMap
     
 get(char key): 
-  - Method gets the desired key from hashTable; utilizes linear probing until the key is found; if the key is not found, returns empty KeyValuePair object / null
+  - Method gets the desired key from PrefixMap; utilizes linear probing until the key is found; if the key is not found, returns empty KeyValuePair object / null
     
 remove(char key):   
-  - Method finds the desired key and removes the key from the Hash Table; utilizes linear probing to find keys should they not be at the "correct" index
+  - Method finds the desired key and removes the key from the PrefixMap; utilizes linear probing to find keys should they not be at the "correct" index
 
 resizeUp(): 
  - method resizes the PrefixMap to be the next prime number and rehashes all of the values present in the hashMap
