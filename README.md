@@ -156,18 +156,35 @@ getHashTable():
 
 
 
-**Huffman Class:**<br> 
-Building the Huffman tree using the Frequency objects and the MinHeap.
-Generating Huffman codes for each character.
-Encoding and decoding text using the generated codes.
+## Huffman Class
 
-**Possible Methods:** <br>
-buildTree(MinHeap heap) --> Construct the Huffman tree from the Frequency objects in the MinHeap.<br> 
-generateCodes(Node root, String code) --> Recursively generate Huffman codes.<br> 
-encode(String text) --> Encode the text using the Huffman codes.<br> 
-decode(String encodedText) --> Decode the encoded text back to the original text.<br> 
+The Huffman class is specifically designed for encoding and decoding text using Huffman coding, a widely used method of lossless data compression.
 
-Huffman would use the extractMin() method of MinHeap to repeatedly get the two Frequency objects with the lowest frequencies during the Huffman tree construction process.
+### Overview
+
+This class involves constructing a Huffman tree based on character frequencies derived from the input text. It then generates unique Huffman codes for each character and uses these codes for efficient text compression and decompression.
+
+### Components
+
+- **TreeNode**: Represents nodes in the Huffman tree, each containing frequency data and character information.
+- **Frequencies**: A utility class that counts the frequency of each character in the input text.
+- **minHeap**: A custom implementation used to build the Huffman tree efficiently, ensuring that characters with lower frequencies are given longer codes and those with higher frequencies receive shorter codes.
+- **PrefixMap**: A special data structure designed to store and manage Huffman codes associated with each character in the input text.
+
+### Key Methods
+
+- **buildTree(Frequencies frequencies)**: Utilizes a `minHeap` to construct the Huffman tree from the frequency data of characters.
+- **buildCodes(TreeNode node, String code)**: Recursively traverses the Huffman tree to generate and assign binary codes to each character, storing these codes in the `PrefixMap`.
+- **encode(String text)**: Converts plain text into a string of binary codes using the Huffman codes stored in the `PrefixMap`.
+- **decode(String encodedText)**: Reconstructs the original text from the encoded string by interpreting the binary codes through the Huffman tree structure.
+
+### Usage
+
+- **Encoding**: Converts input text to a compressed format using Huffman codes, optimizing data storage by using variable-length codes for different characters based on their frequencies.
+- **Decoding**: Reverses the encoding process, rebuilding the original text from the encoded data using the generated Huffman tree.
+
+
+
 
 
 
