@@ -1,4 +1,6 @@
-//Gar
+/**
+ * @author gareginmazmanyan
+ */
 
 import java.util.Scanner;
 
