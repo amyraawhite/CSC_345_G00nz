@@ -6,23 +6,23 @@ Group Members: Amyra White, Suhani Surana, Chitrangada Juneja, Garegin Mazmanyan
 INSERT EXPLANATIONS OF FINAL CODE PRODUCT AND FUNCTIONALITY 
 
 **Frequencies Class:**<br> 
-The Frequencies<T> class calculates the frequencies of the items stored in the Hashtable class. 
+The Frequencies<T> class calculates the frequencies of the items by using the HashTable class. After frequencies have been calculated it returns an array of all the unique values and characters 
 
 **Methods Implemented:**<br> 
 
 Constructor: 
 
-- Frequencies(): Constructs a new instance of the Frequencies class.
+- Frequencies(String input): Constructs a new instance of the Frequencies class with the given line of text from the user.
 
 Methods:
 
-- calculateFrequencies(T[] items): This method calculates the frequencies of each item from the HashTable Class.
+- calculateFrequencies(String input): This method calculates the frequencies of each character from the user's input
 
-- displayFrequencies(): This method displays the calculated frequencies to the console. This would be a useful method for debugging and testing the working of our algorithm.
+- returnUniques(): method returns an array only containing unique characters; rides of null placeholders from HashTable 
 
 
 **TreeNode Class:**<br>
-The TreeNode class utilizes the fact that as Huffman Encoding proceeds, we end up with a Tree; therefore instead of creating two different classes for this, we give a Node the ability to be identified as a subtree; therefore essentially, we dont deal with nodes, we deal with subtrees where its possible to have just a single node. This reduces our code, and makesit easier to implement the printing and merging of the nodes during debugging, especially since most of this will be accomplished recursively. 
+The TreeNode class utilizes the fact that as Huffman Encoding proceeds, we end up with a Tree; therefore instead of creating two different classes for this, we give a Node the ability to be identified as a subtree; therefore essentially, we dont deal with nodes, we deal with subtrees where its possible to have just a single node. This reduces our code, and makes it easier to implement the printing and merging of the nodes during debugging, especially since most of this will be accomplished recursively. 
 
 **Methods Implemented:**<br>
 
@@ -183,7 +183,52 @@ This class involves constructing a Huffman tree based on character frequencies d
 - **Encoding**: Converts input text to a compressed format using Huffman codes, optimizing data storage by using variable-length codes for different characters based on their frequencies.
 - **Decoding**: Reverses the encoding process, rebuilding the original text from the encoded data using the generated Huffman tree.
 
+**PrefixMap Class:**<br> 
+The class builds/constructs a HashMap that will hold the character along with the prefix code associated with that character. Utilizes resizing and load factor 
 
+**Methods Implemented:**<br> 
+
+PrefixMap(): 
+  - Constructor for initialization of HashTable with no size input
+    
+PrefixMap(int size):  
+  - Constructor for initialization of HashTable with a size input
+    
+put(char key, String prefixCode): 
+  - 
+    
+get(char key): 
+  - Method gets the desired key from hashTable; utilizes linear probing until the key is found; if the key is not found, returns empty KeyValuePair object / null
+    
+remove(char key):   
+  - Method finds the desired key and removes the key from the Hash Table; utilizes linear probing to find keys should they not be at the "correct" index
+
+resizeUp(): 
+ - method resizes the PrefixMap to be the next prime number and rehashes all of the values present in the hashMap
+
+putExisitng(PrefixPair key): 
+  - Method takes an existing Prefix pair and inserts it into the new PrefixMap to preserve its current frequency
+
+resizeDown(): 
+  - method resizes PrefixMap to be the next smallest prime number and rehashes all of the values present in the Hash Table
+
+isPrime(int num): 
+  - method returns a boolean that says if the passed number was prime or not
+
+nextSmallestPrime(int num): 
+  - Method finds the next smallest prime number and uses isPrime to validate the number
+
+nextLargestPrime(int num): 
+  - Method find the next largest prime number and uses isPrime to validate that number
+
+hash(char key): 
+  - function returns the hash Value of the current key
+    
+get_size(): 
+  - Method returns the current size of the table
+
+getHashTable(): 
+  - Method returns the current Prefix Map<br>
 
 
 
